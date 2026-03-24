@@ -237,8 +237,8 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 </div>
 
 <div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('jp')">JP</button>
-  <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="lang-btn active" onclick="setLang('jp');toggleYoutube('jp')">JP</button>
+  <button class="lang-btn" onclick="setLang('en');toggleYoutube('en')">EN</button>
 </div>
 
 <!-- HERO -->
@@ -261,7 +261,20 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
   <div class="scroll-hint">▼ scroll</div>
 </div>
 
+
 <div class="divider"></div>
+
+<!-- GAMEPLAY PREVIEW -->
+<section id="gameplay-preview" style="padding:60px 24px;max-width:900px;margin:0 auto;text-align:center;">
+  <div class="fade-in">
+    <p class="section-label" style="text-align:center;" data-en="GAMEPLAY PREVIEW" data-kr="게임플레이 프리뷰" data-jp="ゲームプレイプレビュー">ゲームプレイプレビュー</p>
+    <h2 class="section-title" style="text-align:center;" data-en="Gameplay Preview" data-kr="게임플레이 프리뷰" data-jp="ゲームプレイプレビュー">ゲームプレイプレビュー</h2>
+  </div>
+  <div class="fade-in" style="margin-top:32px;border-radius:16px;overflow:hidden;position:relative;aspect-ratio:16/9;">
+    <iframe id="yt-jp" src="https://www.youtube.com/embed/DXHYli3S_YA" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:16px;" allowfullscreen></iframe>
+    <iframe id="yt-en" src="https://www.youtube.com/embed/wqqJfvrjwFs" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:16px;display:none;" allowfullscreen></iframe>
+  </div>
+</section>
 
 <!-- STORY -->
 <section id="story">
@@ -518,7 +531,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
     <p class="section-label" data-en="REFERENCES" data-kr="레퍼런스" data-jp="参考作品">参考作品</p>
     <h2 class="section-title" data-en="GAMES THAT INSPIRED US" data-kr="우리에게 영감을 준 게임들" data-jp="私たちにインスピレーションを<br>与えたゲームたち">私たちにインスピレーションを与えたゲーム</h2>
     <p class="ref-intro" style="font-weight:700;color:#ffffff;">
-      <span style="color:#ffff00;font-weight:900" data-en="Rayman" data-kr="레이맨" data-jp="レイマン">レイマン</span><span style="color:#ffffff;font-weight:700" data-en="'s co-op" data-kr="의 협동" data-jp="の協力プレイ">の協力</span>, <span style="color:#ffff00;font-weight:900" data-en="Mario" data-kr="마리오" data-jp="マリオ">マリオ</span><span style="color:#ffffff;font-weight:700" data-en="'s joy and emotion" data-kr="의 즐거움과 감성" data-jp="の楽しさと温かさ">の楽しさと感性</span>, <span style="color:#ffff00;font-weight:900" data-en="Ori" data-kr="오리" data-jp="オリ">オリ</span><span style="color:#ffffff;font-weight:700" data-en="'s puzzles" data-kr="의 퍼즐" data-jp="のパズル">のパズル</span><span style="color:#ffffff;font-weight:700" data-en=" — these three games inspired " data-kr="이 세 게임이 " data-jp="、この3つのゲームが<br>">、この3つのゲームが<br></span><span data-en="Wacky! Deer&amp;Munk Adventure" data-kr="Wacky! Deer&amp;Munk Adventure" data-jp="ドタバタ！ゴーディアとダチップの大冒険"><strong>Wacky! Deer&amp;Munk Adventure</strong></span><span style="color:#ffffff;font-weight:700" data-en="." data-kr="에 영감을 줬다." data-jp="にインスピレーションを与えました。">にインスピレーションを与えました。</span>
+      <span style="color:#ffff00;font-weight:900" data-en="Rayman" data-kr="레이맨" data-jp="レイマン">レイマン</span><span style="color:#ffffff;font-weight:700" data-en="'s co-op" data-kr="의 협동" data-jp="の協力プレイ">の協力</span>, <span style="color:#ffff00;font-weight:900" data-en="Super Mario" data-kr="슈퍼마리오" data-jp="スーパーマリオ">マリオ</span><span style="color:#ffffff;font-weight:700" data-en="'s joy and heart" data-kr="의 즐거움과 감성" data-jp="の楽しさと温かさ">の楽しさと感性</span>, <span style="color:#ffff00;font-weight:900" data-en="Ori" data-kr="오리" data-jp="オリ">オリ</span><span style="color:#ffffff;font-weight:700" data-en="'s puzzles" data-kr="의 퍼즐" data-jp="のパズル">のパズル</span><span style="color:#ffffff;font-weight:700" data-en=" — these three games inspired " data-kr="이 세 게임이 " data-jp="、この3つのゲームが<br>">、この3つのゲームが<br></span><span data-en="Wacky! Deer&amp;Munk Adventure" data-kr="Wacky! Deer&amp;Munk Adventure" data-jp="ドタバタ！ゴーディアとダチップの大冒険"><strong>Wacky! Deer&amp;Munk Adventure</strong></span><span style="color:#ffffff;font-weight:700" data-en="." data-kr="에 영감을 줬다." data-jp="にインスピレーションを与えました。">にインスピレーションを与えました。</span>
     </p>
   </div>
   <div class="refs-grid fade-in">
@@ -839,7 +852,15 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 setTimeout(()=>{document.querySelectorAll('.hero .fade-in').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),i*150);});},100);
 document.addEventListener('DOMContentLoaded',()=>setLang('jp'));
+function toggleYoutube(lang){
+  var jpYt = document.getElementById('yt-jp');
+  var enYt = document.getElementById('yt-en');
+  if(!jpYt || !enYt) return;
+  if(lang==='jp'){jpYt.style.display='block';enYt.style.display='none';}
+  else{jpYt.style.display='none';enYt.style.display='block';}
+}
 if(document.readyState==='complete'||document.readyState==='interactive'){setLang('jp');}
+function setLangWithYT(lang){setLang(lang);toggleYoutube(lang);}
 </script>
 </body>
 </html>
