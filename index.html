@@ -46,7 +46,7 @@ img{background:transparent;}
 .hero-main{font-family:'Anton','Noto Sans KR',sans-serif;font-size:clamp(28px,4vw,44px);color:var(--white);font-weight:400;text-align:center;margin-top:24px;letter-spacing:2px;position:relative;z-index:1;line-height:1.2;}.hero-main.lang-jp{font-weight:900;font-family:'Noto Sans JP',sans-serif;}
 .hero-sub{font-size:15px;color:var(--gold);text-align:center;margin-top:8px;font-style:italic;font-weight:500;position:relative;z-index:1;}
 .hero-divider{width:120px;height:3px;background:var(--gold);margin:16px auto;border-radius:2px;position:relative;z-index:1;}
-.hero-meta{font-size:12px;color:rgba(255,248,238,.5);text-align:center;letter-spacing:2px;text-transform:uppercase;position:relative;z-index:1;}
+.hero-meta{font-size:12px;color:rgba(255,248,238,.5);text-align:center;letter-spacing:2px;position:relative;z-index:1;}
 .readiness-badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a6b2a,#27AE60);color:white;font-weight:700;font-size:13px;padding:10px 24px;border-radius:30px;margin-top:20px;position:relative;z-index:1;letter-spacing:1px;animation:pulse-green 2.5s infinite;}
 @keyframes pulse-green{0%,100%{box-shadow:0 4px 20px rgba(39,174,96,.4);}50%{box-shadow:0 4px 32px rgba(39,174,96,.7);}}
 .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:11px;color:rgba(255,248,238,.4);letter-spacing:2px;text-transform:uppercase;animation:bounce 2s infinite;}
@@ -254,7 +254,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
   <div class="hero-main fade-in" data-en="Built for Nintendo, Crafted for Joy." data-kr="Built for Nintendo, Crafted for Joy." data-jp="Nintendo Switch™のために。ユーザーの喜びのために。">任天堂のために作り、喜びのために磨いた。</div>
   <div class="hero-sub fade-in" data-en="Switch First. Switch Only." data-kr="Switch First. Switch Only." data-jp="Nintendo Switch™ファースト。Nintendo Switch™オンリー。">Nintendo Switch™ファースト。Nintendo Switch™オンリー。</div>
   <div class="hero-divider"></div>
-  <div class="hero-meta fade-in">IDIOCRACY, INC. · Nintendo Switch · 2026</div>
+  <div class="hero-meta fade-in">IDIOCRACY, INC. · 2026</div>
   <div class="readiness-badge fade-in">
     ✅ <span data-en="95% Complete · Co-op Gimmicks + QA in Progress" data-kr="출시 준비율 95% · 협동 기믹 추가 및 QA 진행중" data-jp="完成度95% · 協力ギミック追加・QA進行中">完成度95% · 協力ギミック追加・QA進行中</span>
   </div>
@@ -322,7 +322,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
   <div class="fade-in">
     <p class="section-label" data-en="THE DUO" data-kr="두 캐릭터" data-jp="二人のキャラクター">二人のキャラクター</p>
     <h2 class="section-title" data-en="MEET THE DUO" data-kr="두 주인공을 만나다" data-jp="二人のキャラクターに会おう">二人のキャラクターに会おう</h2>
-    <p class="section-sub" data-en="Neither can do it alone. That's the whole point." data-kr="혼자서는 안 된다. 그게 전부다." data-jp="どちらも一人の力ではクリアできない。ひとりプレイでは交代しながら、ふたりプレイでは力を合わせて前へ進もう！">どちらも一人ではできない。それがすべて。</p>
+    <p class="section-sub" data-en="Neither can do it alone. That's the whole point." data-kr="혼자서는 안 된다. 그게 전부다." data-jp="どちらも一人の力ではクリアできない。ひとりプレイでは交代しながら、<br>ふたりプレイでは力を合わせて前へ進もう！">どちらも一人の力ではクリアできない。ひとりプレイでは交代しながら、<br>ふたりプレイでは力を合わせて前へ進もう！</p>
   </div>
   <div class="char-grid fade-in">
     <div class="char-card">
@@ -396,7 +396,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 <section id="screenshots">
   <div class="fade-in">
     <p class="section-label" data-en="SCREENSHOTS" data-kr="스크린샷" data-jp="スクリーンショット">スクリーンショット</p>
-    <h2 class="section-title" data-en="SEE IT IN ACTION" data-kr="실제 플레이를 보다" data-jp="ヘタウマなキャラクターたちの実際のゲームプレイシーン！">実際のプレイを見る</h2>
+    <h2 class="section-title" data-en="SEE IT IN ACTION" data-kr="실제 플레이를 보다" data-jp="ヘタウマなキャラクターたちの<br>実際のゲームプレイシーン！">実際のプレイを見る</h2>
   </div>
   <div class="screenshot-slider-wrap fade-in">
     <div class="screenshot-slider" id="screenshotSlider">
@@ -476,7 +476,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
     <p class="section-label" data-en="CO-OP FEATURE" data-kr="코옵 피처" data-jp="協力プレイの特徴">協力プレイの特徴</p>
     <div class="coop-slogan">
       <span data-en="You can't go alone." data-kr="혼자선 못 간다." data-jp="一人じゃ行けない。">一人じゃ行けない。</span><br>
-      <span style="color:var(--gold)" data-en="Together, you go." data-kr="둘이서 간다." data-jp="二人だから行ける！">二人で行こう。</span>
+      <span style="color:var(--gold)" data-en="Together, you go." data-kr="둘이서 간다." data-jp="二人だから行ける!">二人で行こう。</span>
     </div>
   </div>
   <div class="coop-screens fade-in">
@@ -564,7 +564,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
     <div class="ip-stat"><div class="ip-stat-num">98.9%</div><div class="ip-stat-label" data-en="KakaoTalk usage rate in Korea<br>(Korea Press Foundation 2024)" data-kr="대한민국 카카오톡 이용률 (한국언론진흥재단 2024)" data-jp="韓国KakaoTalk利用率<br>（韓国言論振興財団 2024）">韓国KakaoTalk利用率 (韓国言論振興財団 2024)<br>(한국언론진흥재단 2024)</div></div>
     <div class="ip-stat"><div class="ip-stat-num" data-en="300B+ sends" data-kr="3,000억" data-jp="3,000億回">3,000億回</div><div class="ip-stat-label" data-en="Kakao emoticon total<br>messages sent (Kakao Official 2025)" data-kr="카카오 이모티콘 누적 발신량 (카카오 공식 2025)" data-jp="カカオスタンプ累計送信数<br>（カカオ公式 2025）">カカオ絵文字累計送信数 (カカオ公式 2025)<br>(카카오 공식 2025)</div></div>
     <div class="ip-stat"><div class="ip-stat-num">TOP</div><div class="ip-stat-label" data-en="2025 Official Popular Emoticon<br>— Kakao 14th Anniversary" data-kr="2025 카카오 14주년 공식 인기 이모티콘 선정" data-jp="2025年 カカオ14周年 公式<br>人気スタンプ選出">2025年カカオ14周年 公式人気絵文字選出<br>공식 인기 이모티콘 선정</div></div>
-    <div class="ip-stat"><div class="ip-stat-num">52%</div><div class="ip-stat-label" data-en="Nintendo Switch™ female owners<br>highest among all consoles (Circana 2023)" data-kr="닌텐도 스위치 여성 소유 비율 — 전 콘솔 중 1위 (Circana 2023)" data-jp="Nintendo Switch™ 女性所有率<br>全コンソール中第1位（Circana 2023）">Nintendo Switch女性所有率 — 全コンソール中1位 (Circana 2023)<br>전 콘솔 중 1위 (Circana 2023)</div></div>
+    <div class="ip-stat"><div class="ip-stat-num">52%</div><div class="ip-stat-label" data-en="Nintendo Switch™ female owners<br>highest among all consoles<br>(Circana 2023)" data-kr="닌텐도 스위치 여성 소유 비율 — 전 콘솔 중 1위 (Circana 2023)" data-jp="Nintendo Switch™ 女性所有率<br>全コンソール中第1位（Circana 2023）">Nintendo Switch女性所有率 — 全コンソール中1位 (Circana 2023)<br>전 콘솔 중 1위 (Circana 2023)</div></div>
   </div>
 
   <div class="ip-evidence fade-in">
@@ -603,8 +603,8 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
         </div>
       </div>
       <div class="evidence-body">
-        <div class="evidence-title" data-en="Target: Women 20-30s = Nintendo Switch's Core Demographic" data-kr="타겟: 20~30대 여성 = 닌텐도 스위치 핵심 구매층" data-jp="ターゲット：未就学児から小・中学生、そしてゲームが苦手なライトユーザー（女性ユーザーを含む）まで ＝ Nintendo Switch™ コア購買層">ターゲット：20〜30代女性 = Nintendo Switch™のコア購買層</div>
-        <div class="evidence-desc" data-en="GO-rani's fan base is concentrated in women in their 20s–30s — perfectly aligned with Nintendo Switch's #1 female ownership rate (52%). In 2025, Kakao Entertainment is aggressively expanding the IP with goods, pop-up stores, webtoons, and collaborations." data-kr="GO라니의 팬베이스는 <span class='highlight-yellow'>20~30대 여성</span>에 집중. 닌텐도 스위치 여성 소유 비율 1위(52%)와 정확히 일치합니다. 2025년 카카오엔터테인먼트는 굿즈, 팝업스토어, 웹툰, 콜라보 등 공격적인 IP 확장을 진행 중입니다." data-jp="ゴーディアのコアファン層である20〜30代女性は、Nintendo Switch™ユーザーの女性比率（52%）と完全に一致。既存のゲーマーはもちろん、新たな女性ファン層の獲得にも大きく貢献します。">ゴーディアのファンベースは20〜30代女性に集中。Nintendo Switch™の女性所有率第1位（52%）と完全に一致しています。2025年、カカオエンターテインメントはグッズ・ポップアップストア・ウェブトゥーン・コラボなど、積極的なIP拡大を推進中です。</div>
+        <div class="evidence-title" data-en="Target: Women 20-30s = Nintendo Switch™'s Core Demographic" data-kr="타겟: 20~30대 여성 = 닌텐도 스위치 핵심 구매층" data-jp="ターゲット：未就学児から小・中学生、そしてゲームが苦手なライトユーザー（女性ユーザーを含む）まで ＝ Nintendo Switch™ コア購買層">ターゲット：20〜30代女性 = Nintendo Switch™のコア購買層</div>
+        <div class="evidence-desc" data-en="GO-rani's fan base is concentrated in women in their 20s–30s — perfectly aligned with Nintendo Switch™'s #1 female ownership rate (52%). In 2025, Kakao Entertainment is aggressively expanding the IP with goods, pop-up stores, webtoons, and collaborations." data-kr="GO라니의 팬베이스는 <span class='highlight-yellow'>20~30대 여성</span>에 집중. 닌텐도 스위치 여성 소유 비율 1위(52%)와 정확히 일치합니다. 2025년 카카오엔터테인먼트는 굿즈, 팝업스토어, 웹툰, 콜라보 등 공격적인 IP 확장을 진행 중입니다." data-jp="ゴーディアのコアファン層である20〜30代女性は、Nintendo Switch™ユーザーの女性比率（52%）と完全に一致。既存のゲーマーはもちろん、新たな女性ファン層の獲得にも大きく貢献します。">ゴーディアのファンベースは20〜30代女性に集中。Nintendo Switch™の女性所有率第1位（52%）と完全に一致しています。2025年、カカオエンターテインメントはグッズ・ポップアップストア・ウェブトゥーン・コラボなど、積極的なIP拡大を推進中です。</div>
         <div style="margin-top:10px;padding:6px 12px;background:rgba(0,180,80,0.15);border:1px solid rgba(0,200,80,0.4);border-radius:6px;display:inline-block;">
           <span style="color:#00c850;font-size:12px;font-weight:700;" data-en="🔒 Kakao Entertainment Confidential — #1 Tier Emoticon IP for Women in their 20s–30s" data-kr="🔒 Kakao Entertainment Confidential — 20-30대 여성 1티어 이모티콘 IP" data-jp="🔒 Kakao Entertainment Confidential — 20〜30代女性ユーザーに人気を誇るトップクラスのスタンプIP">🔒 Kakao Entertainment Confidential — 20-30대 여성 1티어 이모티콘 IP</span>
         </div>
@@ -672,7 +672,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
       <div class="rm-step">
         <div class="rm-dot future">🚀</div>
         <div class="rm-title" data-en="LAUNCH" data-kr="정식 출시" data-jp="正式リリース">正式リリース</div>
-        <div class="rm-sub" data-en="Nintendo Switch™ 2026" data-kr="닌텐도 스위치 2026" data-jp="Nintendo Switch™ 2026">Nintendo Switch 2026</div>
+        <div class="rm-sub" data-en="Nintendo Switch™ 2026" data-kr="닌텐도 스위치 2026" data-jp="Nintendo Switch™ 2026">Nintendo Switch™ 2026</div>
       </div>
     </div>
   </div>
@@ -739,9 +739,9 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
     <img src="images/company_logo_transparent.png" alt="IDIOCRACY INC.">
   </div>
   <div class="contact-headline fade-in" data-en="WE ARE READY!" data-kr="우리는 준비가 되었습니다!" data-jp="すべての準備が、整いました。WE ARE READY!">すべての準備が、整いました。WE ARE READY!</div>
-  <div class="contact-message fade-in" data-en="We are ready to show Nintendo Switch's global users what we're made of — and we look forward to the day we move them." data-kr="닌텐도 스위치 글로벌 유저들에게 우리의 장점을 보여주고,<br>감동을 주는 그날을 기다립니다." data-jp="Nintendo Switch™のプレイヤーたちに、私たちだからこそ届けられる感動を。その日のために、チーム全員で今日もこのゲームに一生懸命取り組んでいます。">Nintendo Switch™のプレイヤーたちに、私たちだからこそ届けられる感動を。その日のために、チーム全員で今日もこのゲームに一生懸命取り組んでいます。<br>감동을 주는 그날을 기다립니다.</div>
+  <div class="contact-message fade-in" data-en="We are ready to show Nintendo Switch™'s global users what we're made of — and we look forward to the day we move them." data-kr="닌텐도 스위치 글로벌 유저들에게 우리의 장점을 보여주고,<br>감동을 주는 그날을 기다립니다." data-jp="Nintendo Switch™のプレイヤーたちに、私たちだからこそ届けられる感動を。<br>その日のために、チーム全員で今日もこのゲームに一生懸命取り組んでいます。">Nintendo Switch™のプレイヤーたちに、私たちだからこそ届けられる感動を。<br>その日のために、チーム全員で今日もこのゲームに一生懸命取り組んでいます。<br>감동을 주는 그날을 기다립니다.</div>
   <div class="contact-closing fade-in" data-en="'With Nintendo, we can go further.'" data-kr="'닌텐도와 함께라면, 더 멀리 갈 수 있습니다.'" data-jp="「Nintendo Switch™と共に、もっと遠くへ。」">「Nintendo Switch™と共に、もっと遠くへ。」</div>
-  <div class="confidential fade-in" data-en="CONFIDENTIAL — FOR NINTENDO REVIEW ONLY" data-kr="기밀 — 닌텐도 검토 전용" data-jp="機密 — Nintendo Switch™ 審査専用">機密 — Nintendo Switch™ 審査専用</div>
+  <div class="confidential fade-in" data-en="CONFIDENTIAL — For Nintendo Switch™ Review Only" data-kr="기밀 — 닌텐도 검토 전용" data-jp="機密 — Nintendo Switch™ 審査専用">機密 — Nintendo Switch™ 審査専用</div>
 </section>
 
 <script>
