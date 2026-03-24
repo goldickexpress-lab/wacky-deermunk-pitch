@@ -765,7 +765,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 function setLang(lang){
   // 버튼 active
   document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+  document.querySelectorAll('.lang-btn').forEach(b=>{ if(b.textContent.trim()===lang.toUpperCase()) b.classList.add('active'); });
   // 텍스트 교체 (타이틀 img 제외)
   // 언어별 이미지 교체
   document.querySelectorAll('[data-en-src]').forEach(el=>{
