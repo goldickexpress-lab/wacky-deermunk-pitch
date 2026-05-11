@@ -237,7 +237,8 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
 </div>
 
 <div class="lang-toggle">
-  <button class="lang-btn active" onclick="setLang('jp');toggleYoutube('jp')">JP</button>
+  <button class="lang-btn active" onclick="setLang('kr');toggleYoutube('kr')">KR</button>
+  <button class="lang-btn" onclick="setLang('jp');toggleYoutube('jp')">JP</button>
   <button class="lang-btn" onclick="setLang('en');toggleYoutube('en')">EN</button>
 </div>
 
@@ -251,7 +252,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
     <img src="images/title_EN.png" id="hero-title-en" style="width:100%;display:block;border-radius:16px;" alt="Wacky Deer&Munk Adventure">
     <img src="images/title_JP.png" id="hero-title-jp" style="width:100%;display:none;border-radius:16px;" alt="ドタバタ！ゴーディアとダチップの大冒険">
   </div>
-  <div class="hero-main fade-in" data-en="Built for Nintendo Switch™,<br>Crafted for Joy." data-kr="Built for Nintendo Switch™,<br>Crafted for Joy." data-jp="Nintendo Switch™のために。<br>ユーザーの喜びのために。">Nintendo Switch™のために。ユーザーの喜びのために。</div>
+  <div class="hero-main fade-in" data-en="Built for Nintendo Switch™,<br>Crafted for Joy." data-kr="Nintendo Switch™를 위해.<br>플레이어의 기쁨을 위해." data-jp="Nintendo Switch™のために。<br>ユーザーの喜びのために。">Nintendo Switch™のために。ユーザーの喜びのために。</div>
   <div class="hero-sub fade-in" data-en="Switch First. Switch Only." data-kr="Switch First. Switch Only." data-jp="Nintendo Switch™ファースト。Nintendo Switch™オンリー。">Nintendo Switch™ファースト。Nintendo Switch™オンリー。</div>
   <div class="hero-divider"></div>
   <div class="hero-meta fade-in">IDIOCRACY, INC. · 2026</div>
@@ -670,23 +671,26 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
         <div class="rm-sub" data-en="Core content complete" data-kr="핵심 콘텐츠 완성" data-jp="コアコンテンツ完成">コアコンテンツ完成</div>
       </div>
       <div class="rm-step">
-        <div class="rm-dot current">▶</div>
-        <div class="rm-badge-now" data-en="IN PROGRESS" data-kr="진행중" data-jp="進行中">진행중</div>
+        <div class="rm-dot done">✓</div>
+        <div class="rm-badge-done" data-en="DONE" data-kr="완료" data-jp="完了">완료</div>
         <div class="rm-title" data-en="POLISHING &amp; QA" data-kr="폴리싱 및 QA" data-jp="ポリッシング＆QA">ポリッシング＆QA</div>
         <div class="rm-sub" data-en="Co-op staging & quality up" data-kr="협동 연출 및 퀄리티 업" data-jp="協力演出＆品質向上">協力演出＆品質向上</div>
       </div>
       <div class="rm-step">
-        <div class="rm-dot future">🌐</div>
+        <div class="rm-dot done">✓</div>
+        <div class="rm-badge-done" data-en="DONE" data-kr="완료" data-jp="完了">완료</div>
         <div class="rm-title" data-en="LOCALIZATION" data-kr="로컬라이제이션" data-jp="ローカライゼーション">ローカライゼーション</div>
         <div class="rm-sub">KR/EN/JP/ZH/TH<br>FR/IT/ES/DE/RU</div>
       </div>
       <div class="rm-step">
-        <div class="rm-dot future">🔍</div>
+        <div class="rm-dot done">✓</div>
+        <div class="rm-badge-done" data-en="DONE" data-kr="완료" data-jp="完了">완료</div>
         <div class="rm-title" data-en="LOT CHECK" data-kr="로트체크" data-jp="ロットチェック">ロットチェック</div>
         <div class="rm-sub" data-en="NSP Submission" data-kr="nsp 제출" data-jp="nsp提出">nsp提出</div>
       </div>
       <div class="rm-step">
-        <div class="rm-dot future">🚀</div>
+        <div class="rm-dot current">🚀</div>
+        <div class="rm-badge-now" data-en="COMING SOON" data-kr="출시 임박" data-jp="まもなく">출시 임박</div>
         <div class="rm-title" data-en="LAUNCH" data-kr="정식 출시" data-jp="正式リリース">正式リリース</div>
         <div class="rm-sub" data-en="Nintendo Switch™ 2026" data-kr="닌텐도 스위치 2026" data-jp="Nintendo Switch™ 2026">Nintendo Switch™ 2026</div>
       </div>
@@ -784,6 +788,7 @@ function setLang(lang){
       enImg.style.setProperty('display','none','important');
       jpImg.style.setProperty('display','block','important');
     } else {
+      // KR, EN 모두 EN 이미지 사용
       enImg.style.setProperty('display','block','important');
       jpImg.style.setProperty('display','none','important');
     }
@@ -850,7 +855,7 @@ document.addEventListener('keydown',e=>{
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:0.06});
 document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
 setTimeout(()=>{document.querySelectorAll('.hero .fade-in').forEach((el,i)=>{setTimeout(()=>el.classList.add('visible'),i*150);});},100);
-document.addEventListener('DOMContentLoaded',()=>setLang('jp'));
+document.addEventListener('DOMContentLoaded',()=>setLang('kr'));
 function toggleYoutube(lang){
   var jpYt = document.getElementById('yt-jp');
   var enYt = document.getElementById('yt-en');
@@ -867,6 +872,7 @@ function toggleYoutube(lang){
     jpYt.style.opacity='1';
     jpYt.style.pointerEvents='auto';
   } else {
+    // KR, EN 모두 EN 영상 사용
     stopIframe(jpYt);
     jpYt.style.opacity='0';
     jpYt.style.pointerEvents='none';
@@ -874,7 +880,7 @@ function toggleYoutube(lang){
     enYt.style.pointerEvents='auto';
   }
 }
-if(document.readyState==='complete'||document.readyState==='interactive'){setLang('jp');}
+if(document.readyState==='complete'||document.readyState==='interactive'){setLang('kr');}
 function setLangWithYT(lang){setLang(lang);toggleYoutube(lang);}
 </script>
 </body>
