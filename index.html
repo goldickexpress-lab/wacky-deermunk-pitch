@@ -251,6 +251,7 @@ section{padding:80px 24px;max-width:1100px;margin:0 auto;}
   <div class="hero-title-img" id="heroTitleWrap" style="opacity:1;">
     <img src="images/title_EN.png" id="hero-title-en" style="width:100%;display:block;border-radius:16px;" alt="Wacky Deer&Munk Adventure">
     <img src="images/title_JP.png" id="hero-title-jp" style="width:100%;display:none;border-radius:16px;" alt="ドタバタ！ゴーディアとダチップの大冒険">
+    <img src="images/title_KR.png" id="hero-title-kr" style="width:100%;display:none;border-radius:16px;" alt="우당탕탕 고라니와 다람쥐의 대모험">
   </div>
   <div class="hero-main fade-in" data-en="Built for Nintendo Switch™,<br>Crafted for Joy." data-kr="Nintendo Switch™를 위해.<br>플레이어의 기쁨을 위해." data-jp="Nintendo Switch™のために。<br>ユーザーの喜びのために。">Nintendo Switch™のために。ユーザーの喜びのために。</div>
   <div class="hero-sub fade-in" data-en="Switch First. Switch Only." data-kr="Switch First. Switch Only." data-jp="Nintendo Switch™ファースト。Nintendo Switch™オンリー。">Nintendo Switch™ファースト。Nintendo Switch™オンリー。</div>
@@ -783,14 +784,17 @@ function setLang(lang){
   // 타이틀 이미지 교체
   const enImg=document.getElementById('hero-title-en');
   const jpImg=document.getElementById('hero-title-jp');
+  const krImg=document.getElementById('hero-title-kr');
   if(enImg&&jpImg){
+    enImg.style.setProperty('display','none','important');
+    jpImg.style.setProperty('display','none','important');
+    if(krImg) krImg.style.setProperty('display','none','important');
     if(lang==='jp'){
-      enImg.style.setProperty('display','none','important');
       jpImg.style.setProperty('display','block','important');
+    } else if(lang==='kr'){
+      if(krImg) krImg.style.setProperty('display','block','important');
     } else {
-      // KR, EN 모두 EN 이미지 사용
       enImg.style.setProperty('display','block','important');
-      jpImg.style.setProperty('display','none','important');
     }
   }
   // EN/JP Bold 개별 적용
